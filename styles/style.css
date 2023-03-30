@@ -1,0 +1,66 @@
+@import url(./reset.css);
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    background-color: #ffcc00;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #header-h-logo img {
+    height: 80%;
+    margin: 0 2em;
+    animation: rollIn 5s ease-in-out  1;
+}
+
+header #header-name img {
+    height: 40%;
+}
+
+header #header-dulce-de-leche img {
+    height: 70%;
+    margin-right: 4em;
+}
+
+@keyframes rollIn {
+    from {
+        transform: translateX(2000px) rotate(360);}
+    to {transform: translateX(0);}
+}
+
+@keyframes dripping {
+    0% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80vh);
+    }
+}
+
+#drop {
+    height: 12%;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    animation: dripping 10s ease-in infinite;
+}
+
+#drop:hover {
+    
+}
