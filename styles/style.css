@@ -12,7 +12,8 @@ body {
     height: 100%;
 }
 
-p, li {
+p,
+li {
     font-family: 'Laila', sans-serif;
 }
 
@@ -50,28 +51,55 @@ header #header-dulce-de-leche img {
 }
 
 @keyframes rollIn {
-    from {transform: translateX(110vw) rotate(1000deg);}
-    to {transform: translateX(0) rotate(0deg);}
+    from {
+        transform: translateX(110vw) rotate(1000deg);
+    }
+
+    to {
+        transform: translateX(0) rotate(0deg);
+    }
 }
 
 @keyframes slideIn {
-    0% {transform: translateX(110vw);}
-    50% {transform: translateX(110vw);}
-    100% {transform: translateX(0);}
+    0% {
+        transform: translateX(110vw);
+    }
+
+    50% {
+        transform: translateX(110vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes rotateIn {
-    0% {transform: scale(0);}
-    80% {transform: scale(0);}
-    100% {transform: scale(1);}
+    0% {
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes dripping {
-    0% {transform: translateY(0);}
+    0% {
+        transform: translateY(0);
+    }
 
-    80% {transform: translateY(0);}
+    80% {
+        transform: translateY(0);
+    }
 
-    100% {transform: translateY(100vh);}
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 #drop {
@@ -102,7 +130,7 @@ main h1 {
 }
 
 #intro p {
-    width: 50%;
+    width: 60%;
     font-size: 20px;
     background-image: radial-gradient(#f5db2e48 60%, #ffcc009f);
     padding: 2em;
@@ -111,18 +139,43 @@ main h1 {
     line-height: 1.5;
 }
 
-#intro img {
-    padding: 1em;
-    height: 100%;
+/* Hover Effect and jiggle animation for Alfajor photo */
+
+#intro div {
+    height: 40vh;
+    width: 50vw;
+    background-image: url("../images/havanna-alfajor-transparent.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    animation: jiggle 2s linear infinite;
+    transition: all 1s ease;
 }
 
-#intro img:hover {
-    display: none;
-    background-image: url(../images/alfajors-png.png);
-    padding: 10em;
-
+#intro div:hover {
+    content: ' ';
+    background-image: url("../images/cut-in-half.png");
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
+@keyframes jiggle {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(10deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.separator {
+    width: 100%;
+    height: 25vh;
+    overflow: hidden;
+    margin: 3em 0;
+}
+
+.separator img {
+    width: 100%;
+}
 
 
 
@@ -169,7 +222,7 @@ table tbody tr:last-child td {
 .multi-bg {
     height: 85vh;
     /* creates our multi-image background scene. */
-    background-image: url(../images/dulcedeleche2.png), url(../images/alfajors-png.png), url("../images/havanna-alfajor-chocolate-box.png");
+    background-image: url("../images/dulcedeleche2.png"), url("../images/alfajors-png.png"), url("../images/havanna-alfajor-chocolate-box.png");
     background-repeat: no-repeat;
     background-position: 79% 89%, 25% 100%, 50% 50%;
     background-size: 22vh, 35vh, 100vh;
@@ -197,11 +250,16 @@ footer {
     margin-left: 2em;
 }
 
+footer form {
+    display: flex;
+    align-items: end;
+}
+
 #footer-form {
     margin-bottom: 0.5em;
 }
 
-#footer-form div{
+#footer-form div {
     display: flex;
 }
 
@@ -216,6 +274,19 @@ footer {
     padding: 0.25em;
 }
 
+#footer-form form p button {
+    padding: 0.5em;
+    margin: 0 0 2em 1em;
+    background-color: #f4f4f4;
+    border: 2px solid #e22220;
+    border-radius: 5px;
+}
+
+#footer-form form p button:hover {
+    background-color: #7e4c14;
+    color: #f4f4f4;
+}
+
 footer div ul {
     text-align: right;
     margin-right: 1em;
@@ -224,6 +295,15 @@ footer div ul {
 footer div ul li {
     margin: 0 2em 0.5em 0;
     font-size: 18px;
+}
+
+footer div ul li a {
+    text-decoration: none;
+    color: #e22220;
+}
+
+footer div ul li a:hover {
+    color: #f4f4f4;
 }
 
 #socialMedia {
