@@ -51,55 +51,33 @@ header #header-dulce-de-leche img {
 }
 
 @keyframes rollIn {
-    from {
-        transform: translateX(110vw) rotate(1000deg);
-    }
+    from {transform: translateX(110vw) rotate(1000deg);}
 
-    to {
-        transform: translateX(0) rotate(0deg);
-    }
+    to {transform: translateX(0) rotate(0deg);}
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateX(110vw);
-    }
+    0% {transform: translateX(110vw);}
 
-    50% {
-        transform: translateX(110vw);
-    }
+    50% {transform: translateX(110vw);}
 
-    100% {
-        transform: translateX(0);
-    }
+    100% {transform: translateX(0);}
 }
 
 @keyframes rotateIn {
-    0% {
-        transform: scale(0);
-    }
+    0% {transform: scale(0);}
 
-    80% {
-        transform: scale(0);
-    }
+    80% {transform: scale(0);}
 
-    100% {
-        transform: scale(1);
-    }
+    100% {transform: scale(1);}
 }
 
 @keyframes dripping {
-    0% {
-        transform: translateY(0);
-    }
+    0% {transform: translateY(0);}
 
-    80% {
-        transform: translateY(0);
-    }
+    80% {transform: translateY(0);}
 
-    100% {
-        transform: translateY(100vh);
-    }
+    100% {transform: translateY(100vh);}
 }
 
 #drop {
@@ -147,8 +125,9 @@ main h1 {
     background-image: url("../images/havanna-alfajor-transparent.png");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: contain;
     animation: jiggle 2s linear infinite;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 #intro div:hover {
@@ -168,7 +147,7 @@ main h1 {
 
 .separator {
     width: 100%;
-    height: 25vh;
+    height: auto;
     overflow: hidden;
     margin: 3em 0;
 }
@@ -177,16 +156,55 @@ main h1 {
     width: 100%;
 }
 
+.more-info {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
 
+.more-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more-info div:first-child{
+    width: 50%;
+}
+
+.more-info img {
+    height: auto;
+    width: 65%;
+}
+
+.more-info p {
+    width: 70%;
+    font-size: 20px;
+    background-image: radial-gradient(#f5db2e48 60%, #ffcc009f);
+    padding: 2em;
+    border: 10px solid #603f24;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.more-info p a {
+    color: #e22220;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.more-info p a:hover {
+    color: #7e4c14;
+}
 
 /* Nutritional Facts Table */
 
-table {
+.more-info table {
     border: 10px solid #603f24;
     padding: 1em;
 }
 
-table thead th {
+.more-info table thead th {
     border: 4px solid #603f24;
     padding: 1em;
     text-align: center;
@@ -195,37 +213,31 @@ table thead th {
     background-color: #ffcc009f;
 }
 
-table tbody tr td {
+.more-info table tbody tr td {
     border: 2px solid #603f24;
     text-align: center;
-    padding: 1em;
+    padding: 1em 2em;
     background-color: #f5db2e48;
     font-family: 'Taviraj', serif;
 }
 
-table tbody tr td:first-child {
+.more-info table tbody tr td:first-child {
     text-align: left;
 }
 
-table tbody tr:last-child td {
+.more-info table tbody tr:last-child td {
     font-size: 12px;
 }
-
-
-
-
-
-
 
 /* Multiple Backgrounds */
 
 .multi-bg {
     height: 85vh;
     /* creates our multi-image background scene. */
-    background-image: url("../images/dulcedeleche2.png"), url("../images/alfajors-png.png"), url("../images/havanna-alfajor-chocolate-box.png");
+    background-image: url("../images/dulcedeleche2.png"), url("../images/alfajors-png.png"), url("../images/havanna-alfajor-chocolate-box.png"), url("../images/Flag_of_Argentina.svg.png");
     background-repeat: no-repeat;
-    background-position: 79% 89%, 25% 100%, 50% 50%;
-    background-size: 22vh, 35vh, 100vh;
+    background-position: 79% 89%, 25% 100%, 50% 50%, 95% 95%;
+    background-size: 22vh, 35vh, 100vh, 15vh;
 }
 
 /* Footer */
