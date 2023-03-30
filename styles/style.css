@@ -21,22 +21,35 @@ header div {
 header #header-h-logo img {
     height: 80%;
     margin: 0 2em;
-    animation: rollIn 5s ease-in-out  1;
+    animation: rollIn 5s ease-out 1;
 }
 
 header #header-name img {
     height: 40%;
+    animation: slideIn 10s ease-out 1;
 }
 
 header #header-dulce-de-leche img {
     height: 70%;
     margin-right: 4em;
+    animation: rotateIn 12s linear 1;
 }
 
 @keyframes rollIn {
-    from {
-        transform: translateX(2000px) rotate(360);}
-    to {transform: translateX(0);}
+    from {transform: translateX(110vw) rotate(1000deg);}
+    to {transform: translateX(0) rotate(0deg);}
+}
+
+@keyframes slideIn {
+    0% {transform: translateX(110vw);}
+    50% {transform: translateX(110vw);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes rotateIn {
+    0% {transform: scale(0);}
+    80% {transform: scale(0);}
+    100% {transform: scale(1);}
 }
 
 @keyframes dripping {
